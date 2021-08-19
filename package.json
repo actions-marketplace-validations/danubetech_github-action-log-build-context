@@ -1,0 +1,25 @@
+{
+  "name": "github-action-log-build-context",
+  "version": "1.0.0",
+  "description": "Github action to log build related information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danubetech/github-action-log-build-context.git"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "workflows",
+    "ci"
+  ],
+  "author": "Bernhard Fuchs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danubetech/github-action-log-build-context/issues"
+  },
+  "homepage": "https://github.com/danubetech/github-action-log-build-context#readme"
+}
