@@ -17,7 +17,6 @@
     "ci"
   ],
   "author": "Bernhard Fuchs",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/danubetech/github-action-log-build-context/issues"
   },
