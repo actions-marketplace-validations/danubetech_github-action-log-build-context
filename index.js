@@ -6,19 +6,19 @@ let globalEnv = {};
 for (const [key, value] of Object.entries(process.env)) {
 
     if (key.startsWith('GITHUB_')) {
-        githubEnv = {...githubEnv, key: value }
+        githubEnv[key] = value
     }
 
     if (key.startsWith('RUNNER_')) {
-        runnerEnv = {...runnerEnv, key: value }
+        runnerEnv[key] = value
     }
 
     if (key.startsWith('JAVA_')) {
-        javaEnv = {...javaEnv, key: value }
+        javaEnv[key] = value
     }
 
     if (key.startsWith('GLOBAL_')) {
-        globalEnv = {...globalEnv, key: value }
+        globalEnv[key] = value
     }
 }
 
