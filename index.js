@@ -2,23 +2,20 @@ let githubEnv = {};
 let runnerEnv = {};
 let javaEnv = {};
 let globalEnv = {};
+let otherEnv = {};
 
 for (const [key, value] of Object.entries(process.env)) {
 
     if (key.startsWith('GITHUB_')) {
         githubEnv[key] = value
-    }
-
-    if (key.startsWith('RUNNER_')) {
+    } else if (key.startsWith('RUNNER_')) {
         runnerEnv[key] = value
-    }
-
-    if (key.startsWith('JAVA_')) {
+    } else if (key.startsWith('JAVA_')) {
         javaEnv[key] = value
-    }
-
-    if (key.startsWith('GLOBAL_')) {
+    } else if (key.startsWith('GLOBAL_')) {
         globalEnv[key] = value
+    } else {
+        otherEnv[key] = value
     }
 }
 
@@ -39,5 +36,10 @@ for (const [key, value] of Object.entries(runnerEnv)) {
 
 console.log('\n\n### JAVA environment variables set by Github\n')
 for (const [key, value] of Object.entries(javaEnv)) {
+    console.log(`${key}: ${value}`);
+}
+
+console.log('\n\n### Other environment variables set by Github\n')
+for (const [key, value] of Object.entries(otherEnv)) {
     console.log(`${key}: ${value}`);
 }
